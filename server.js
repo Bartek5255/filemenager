@@ -55,8 +55,8 @@ app.get("/info/:id", function (req, res) {
 
 })
 app.get("/download/:id", function (req, res) {
-    console.log(req.params.id)
-    res.sendFile(path.join(__dirname + "/static/upload/" + req.params.id))
+
+    res.sendFile(req.params.id)
 })
 
 app.post('/handleUpload', function (req, res) {
