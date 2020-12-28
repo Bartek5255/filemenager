@@ -65,6 +65,7 @@ app.post('/handleUpload', function (req, res) {
     form.keepExtensions = true                           // zapis z rozszerzeniem pliku
     form.multiples = true                                // zapis wielu plików                          
     form.parse(req, function (err, fields, files) {
+        res.redirect("/filemenager")
         for (let i = 0; i < files.imagetoupload.length; i++) {
             tablica.pliki.push({
                 id: id,
@@ -79,8 +80,6 @@ app.post('/handleUpload', function (req, res) {
             id += 1
 
         }
-        console.log(tablica.pliki)
-        res.redirect("/filemenager")
     });
 });
 app.get("/", function (req, res) {
