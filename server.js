@@ -13,7 +13,6 @@ let tablica = {
 let roz = ["css", "doc", "docx", "exe", "flv", "gif", "html", "iso", "jar", "jpeg", "jpg", "js", "mov", "mp3", "mp4", "pdf", "php", "png", "ppt", "rar", "txt", "wav", "xls", "xlsx", "zip"]
 let id = 1
 let dane = null
-let pobranie = null
 function sprawdzenie(naz) {
     for (var j = 0; j < roz.length; j++) {
         if (naz == roz[j]) {
@@ -54,9 +53,10 @@ app.get("/info/:id", function (req, res) {
     }
 
 })
-app.get("/download/:id", function (req, res) {
-
-    res.sendFile(req.params.id)
+app.get("/download/:name", function (req, res) {
+    const options = { root: path.join(__dirname + "/static/upload") }
+    const fileName = req.params.name
+    res.sendFile(fileName, options)
 })
 
 app.post('/handleUpload', function (req, res) {
@@ -75,12 +75,11 @@ app.post('/handleUpload', function (req, res) {
                 type: form.openedFiles[i].type,
                 path: form.openedFiles[i].path,
                 savedata: Date.now(),
-                pobranie: form.openedFiles[i].path.substr(form.openedFiles[i].path.lastIndexOf('/') + 1)
+                pobieranie: form.openedFiles[i].path.substr(form.openedFiles[i].path.lastIndexOf("/"))
             })
             id += 1
 
         }
-
     });
 });
 app.get("/", function (req, res) {
