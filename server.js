@@ -66,20 +66,21 @@ app.post('/handleUpload', function (req, res) {
     form.multiples = true                                // zapis wielu plików                          
     form.parse(req, function (err, fields, files) {
         res.redirect("/filemenager")
-        for (let i = 0; i < files.imagetoupload.length; i++) {
+        for (let i = 0; i < form.openedFiles.length; i++) {
             tablica.pliki.push({
                 id: id,
-                obraz: sprawdzenie(files.imagetoupload[i].name.substr(files.imagetoupload[i].name.lastIndexOf(".") + 1)),
-                name: files.imagetoupload[i].name,
-                size: files.imagetoupload[i].size,
-                type: files.imagetoupload[i].type,
-                path: files.imagetoupload[i].path,
+                obraz: sprawdzenie(form.openedFiles[i].name.substr(form.openedFiles[i].name.lastIndexOf(".") + 1)),
+                name: form.openedFiles[i].name,
+                size: form.openedFiles[i].size,
+                type: form.openedFiles[i].type,
+                path: form.openedFiles[i].path,
                 savedata: Date.now(),
-                pobranie: files.imagetoupload[i].path.substr(files.imagetoupload[i].path.lastIndexOf('/') + 1)
+                pobranie: form.openedFiles[i].path.substr(form.openedFiles[i].path.lastIndexOf('/') + 1)
             })
             id += 1
 
         }
+
     });
 });
 app.get("/", function (req, res) {
