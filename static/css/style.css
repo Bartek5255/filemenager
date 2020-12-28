@@ -1,0 +1,136 @@
+p{ 
+    
+    color: blue;
+}
+#login-box {
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+    color: #ebebeb;
+    background-color: cornflowerblue;
+	font: 12px Arial, Helvetica, sans-serif;
+    border: solid 5px blue;
+    position: absolute;
+    left: 50%;
+}
+
+#login-box img {
+	border:none;
+}
+
+#login-box h2 {
+	padding:0;
+	margin:0;
+	color: #ebebeb;
+	font: bold 44px "Calibri", Arial;
+}
+
+
+#login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+	margin:0 0 7px 0;
+}
+
+#login-box-field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:0 0 7px 0;
+}
+
+
+.form-login  {
+	width: 205px;
+	padding: 10px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:royalblue;
+	font-size: 16px;
+	color: #ebebeb;
+}
+
+
+.login-box-options  {
+	clear:both;
+	padding-left:55px;
+	font-size: 11px;
+}
+
+.login-box-options a {
+	color: #ebebeb;
+	font-size: 11px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+#menu{
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    font-size: 40px;
+    color: whitesmoke;
+    left: 0;
+    top: 0;
+    
+}
+a:link, a:visited, a:hover, a:active {
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 40px;
+}
+button{
+    color: whitesmoke;
+    background-color: royalblue;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    margin-top: 55px;
+    font-size: 80px;
+    
+    
+}
+#menu2{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: 50px;
+	font-size: 40px;
+	color: whitesmoke;
+	background-color: aquamarine;
+	left: 0;
+}
+#loggedh1{
+	margin-top: 105px;
+}
+table{
+	
+    width: 90%;
+	position: absolute;
+    font-size: 20px;
+    top: 50px;
+}
+td{
+	height: 40px;
+	text-align: center;
+	border: 1px solid blue;
+}
+form{
+    border: solid black 1px;
+    position: absolute;
+    top: 100px;
+    left: 20%;
+}
+#szce{
+    position: absolute;
+    top: 50px;
+}
