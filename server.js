@@ -75,7 +75,7 @@ app.post('/handleUpload', function (req, res) {
                 type: files.imagetoupload[i].type,
                 path: files.imagetoupload[i].path,
                 savedata: Date.now(),
-                pobranie: files.imagetoupload[i].path.substr(files.imagetoupload[i].path.lastIndexOf('\') + 1)
+                pobranie: files.imagetoupload[i].path.substr(files.imagetoupload[i].path.lastIndexOf('/') + 1)
             })
             id += 1
 
