@@ -20,7 +20,7 @@ function sprawdzenie(naz) {
             return naz
         }
     }
-    return "nul"
+    return "nol"
 }
 
 
